@@ -1,0 +1,9 @@
+<% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+
+<nav id="taxonomies" class="sidebar-item" data-hook>
+  <% danhmuc = @taxonomies.find_by name: 'Danh mục' %>
+  <h4 class='taxonomy-root'><%= danhmuc.name %></h4>
+  <%= taxons_tree(danhmuc.root, @taxon, max_level) %>
+</nav>
+
+<!-- Override by Hao: Just display 'Danh muc' taxon -->

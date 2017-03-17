@@ -1,0 +1,153 @@
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.navbar-default {
+	background-color: #fff;
+	border: none;
+	.navbar-brand {
+		color: #60BA62;
+		font-weight: bold;
+		font-size: 2em;
+		margin-top: 20px;
+		padding-left: 120px;
+		small {
+			display: block;
+			margin-top: 5px;
+			padding-left: 5px;
+			font-size: .5em;
+			font-weight: normal;
+			text-align: left;
+		}
+	}
+	.navbar-toggle {
+		margin-top: 26px;
+	}
+	#navbar-row-one {
+		padding-top: 20px;
+		padding-bottom: 30px;
+		background-image: url(image-path('top-nav-bg'));
+		background-position: top;
+		background-size: 100% auto;
+		background-attachment: fixed;
+		
+		.navbar-right {
+		padding-top: 7px;
+		ul {
+			float: left;
+			padding: 0px 15px 0px 15px;
+			li {
+				display: inline-block;
+				list-style: none;
+			}
+		}
+		input[type="search"] {
+			width: 250px;
+			border-radius: 2px;
+			border: solid 1px #e6e6e6;
+		}
+	}
+	}
+	#navbar-row-two {
+		.container {
+			padding-right: 0px;
+			padding-left: 0px;
+		}
+		background-color: #60ba62;
+		height: 60px;
+		ul {
+			li {
+				a {
+					color: #fff;
+					font-size: 1em;
+					text-transform: uppercase;
+					height: 60px;
+					line-height: 30px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+
+#banner {
+	margin-bottom: 30px;
+	.slide {
+		img {
+			height: 400px;
+		}
+		.carousel-caption {
+			p {
+				background-color: #000;
+				border-radius: 5px;
+				opacity: 0.7;
+				font-size: 2em;
+				font-weight: 900;
+				color: #fff;
+			}
+		}
+	}
+	.rectangle-img {
+		div {
+			height: 400px;
+			background-image: url(image-path('banner-pinapple'));
+			background-size: auto 400px;
+			background-position: bottom;
+		}
+		ul {
+			padding: 30px 5px 20px 5px;
+			margin: auto;
+			li {
+				text-align: center;
+				list-style: none;
+				font-size: 1.5em;
+				font-weight: 600;
+				padding-bottom: 10px;
+				color: #60ba62;
+			}
+		}
+	}
+	.squares-img {
+		padding-bottom: 15px;
+		img {
+			height: 192.5px;
+			-webkit-transition: 1s; /* Safari */
+    	transition: 1s;
+    	transition-timing-function: linear;
+			&:hover {
+				opacity: 0.5;
+				border: solid 10px #e6e6e6;
+				border-radius: 5px;
+				height: 192.5px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+#footer {
+	border-top: solid 1px #eeeeee;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	
+	#footer-left {
+		h5 {
+			font-weight: 800;
+		}
+	}
+
+	#footer-right {
+		margin-top: 10px;
+
+		ul {
+			float: right;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				list-style: none;
+			}
+		}
+	}
+}

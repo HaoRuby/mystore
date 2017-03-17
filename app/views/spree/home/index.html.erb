@@ -1,0 +1,73 @@
+<%# Add banner for homepage %>
+<% content_for :banner do %>
+<div id="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 slide">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <%= image_tag 'banner-slide-1', class: 'img-responsive' %>
+              <div class="carousel-caption">
+                <p>Lựa Chọn Hàng Đầu Cho Sức Khỏe</p>
+              </div>
+            </div>
+            <div class="item">
+              <%= image_tag 'banner-slide-2', class: 'img-responsive' %>
+              <div class="carousel-caption">
+                <p>Giá Cả Luôn Luôn Hợp Lý</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div> <!-- /slide -->
+      <div class="col-xs-3">
+        <div class="row squares-img">
+          <%= image_tag 'banner-banana', class: 'img-responsive' %>
+        </div>
+        <div class="row squares-img">
+          <%= image_tag 'banner-apple', class: 'img-responsive' %>
+        </div>
+      </div>
+      <div class="col-xs-3 rectangle-img">
+        <div>
+          <ul>
+            <li>Nhận đơn hàng các loại từ 100kg trở lên </li>
+            <li>Giao hàng toàn quốc </li>
+            <li>Hotline: ........ </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+</div> <!-- /banner -->
+<% end  %>
+
+<% content_for :sidebar do %>
+<div data-hook="homepage_sidebar_navigation">
+  <%= render :partial => 'spree/shared/taxonomies' %>
+</div>
+<% end %>
+
+<div data-hook="homepage_products">
+  <% cache(cache_key_for_products) do %>
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+  <% end %>
+</div>
